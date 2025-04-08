@@ -1,0 +1,115 @@
+body {
+  background-color: black;
+  /* these properties are inherited by children elements */
+  font-size: 16px;
+  font-family: Arial, Helvetica, sans-serif;
+  color: #fff;
+  background-image: url("../images/hooded.png");
+  background-size: cover;
+
+}
+main {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+header > h1 {
+  text-align: center;
+  padding: 10px;
+}
+
+#main-header {
+  background-color: #9B2019;
+  border-radius: 30px;
+  margin: 20px 0;
+  padding: 2rem;
+  text-align: center;
+}
+
+article {
+  width: 400px;
+  border: 4px solid #fff;
+  border-radius: 8px;
+  margin: 10px;
+}
+article > h2 {
+  color: rgb(5, 4, 4);
+  padding: 4px 10px;
+  text-shadow: 
+  2px 2px 0px rgb(255, 255, 255),   
+  -2px -2px 0px rgb(247, 246, 246), 
+  2px -2px 0px rgb(250, 247, 247),  
+  -2px 2px 0px rgb(250, 248, 248);
+}
+article:first-of-type {
+  border: 4px solid rgb(255, 255, 255);
+}
+
+#inprogress {
+  border: 4px solid rgb(255, 255, 255);
+}
+
+#inprogress h2 {
+  color: rgb(0, 0, 0);
+  text-shadow: 
+  2px 2px 0px rgb(255, 255, 255),   
+  -2px -2px 0px rgb(247, 246, 246), 
+  2px -2px 0px rgb(250, 247, 247),  
+  -2px 2px 0px rgb(250, 248, 248);
+}
+
+#done {
+  border: 4px solid rgb(251, 248, 248);
+}
+
+#done h2 {
+  color: rgb(0, 0, 0);
+  text-shadow: 
+  2px 2px 0px rgb(255, 255, 255),   
+  -2px -2px 0px rgb(247, 246, 246), 
+  2px -2px 0px rgb(250, 247, 247),  
+  -2px 2px 0px rgb(250, 248, 248);
+}
+
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+ul li {
+  padding: 10px;
+}
+
+.todo li:nth-child(odd) {
+  background-color: rgb(0, 0, 0);
+}
+.inprogress li:nth-child(odd) {
+  background-color: rgb(0, 0, 0);
+}
+.done li:nth-child(odd) {
+  background-color: rgb(0, 0, 0);
+}
+
+input[type="checkbox"]  + span::after {
+  content: '\2713';
+  width: 25px;
+  height: 25px;
+  background-color: green;
+  border-radius: 50%;
+  font-size: 24px;
+  border: 4px solid #20b320;
+  position: absolute;
+  
+  opacity: 0;
+  transition: opacity .5s ease-in-out;
+}
+
+input[type="checkbox"]:checked + span::after {
+  opacity: 1;
+  
+}
+
+input [type="checkbox"]:checked + span #city ::after {
+ color: #20b320;
+}
